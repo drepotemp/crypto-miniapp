@@ -54,4 +54,13 @@ bot.telegram.setMyCommands([
   { command: "start", description: "Start the crypto welcome Bot" },
 ]);
 
+app.get("/", (req, res)=>{
+  res.send("Hello-world")
+})
+
+const port = process.env.PORT
+app.listen(port, ()=>{
+  console.log(`Listening on port ${port}`)
+})
+
 bot.launch();
